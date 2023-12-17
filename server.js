@@ -2,7 +2,7 @@ const express=require('express');
 const connectDB = require('./config/connectDB');
 const user=require('./routes/user');
 const rdv=require('./routes/rdv');
-
+require('dotenv').config({path:"./config/.env"})
 const app=express();
 connectDB();
 app.use(express.json());

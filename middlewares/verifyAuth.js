@@ -1,7 +1,7 @@
 const jwt=require('jsonwebtoken');
 const config=require('config');
 const user = require('../models/user');
-const secret=config.get('secret');
+const secret=process.env.secret;
 const verifyAuth=async(req,res,next)=>{
     let token=req.headers.authorization;
   

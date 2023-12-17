@@ -1,7 +1,7 @@
 const rdv = require("../models/Rdv")
 const jwt=require('jsonwebtoken');
 const config=require('config');
-const secret=config.get('secret');
+const secret=process.env.secret;
 exports.register=async(req,res)=>{
     const{fullName,lastName,email,age,adress,date}=req.body;
     const existantRdv=await rdv.findOne({date});
