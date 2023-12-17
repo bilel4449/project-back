@@ -1,7 +1,6 @@
 const user = require("../models/user")
 const bcrypt = require('bcryptjs');
 const jwt=require('jsonwebtoken');
-const config=require('config');
 const secret=process.env.secret;
 
 exports.register=async(req,res)=>{
